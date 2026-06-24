@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    gap: 10px;
+}
+
+
+p {
+    width: 100%;
+}   
+
+@keyframes shake {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contain {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: all 0.4s linear;
+}
+
+.contain:hover {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+
+    animation: shake 1s linear infinite;
+}
+
+.contain_II {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: all 0.4s ease-out;
+}
+
+.contain_II:hover {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes promotion {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.contain_III {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: rgb(101, 101, 252);
+    color: white;
+    border-radius: 10px;
+    font-weight: 400;
+    animation: promotion 0.3s linear infinite;
+}
+
+.contain_III:hover {
+    animation: shake 1s linear infinite;
+}
