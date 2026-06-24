@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: rgb(80, 80, 80);
+    font-style: normal;
+    background-color: #a0a0a0;
+}
+
+nav {
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: max-content; /* Faz o container ocupar exatamente a largura do conteúdo interno, impedindo quebras de linha */
+    border-radius: 15px;
+    flex-shrink: 0;/* Impede o Flexbox de esmagar ou diminuir o tamanho deste componente */
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap; /* MÁGICA: Se não couber na tela, os itens passam para a linha de baixo sem quebrar o layout */
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do body, facilitando mudanças futuras */;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background-color: currentColor; /* Usa automaticamente a cor atual do texto (rgb ou #000) */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition:  0.3s ease-in-out;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:hover::after {
+    width: 100%;
+    background-color: #000;
+}
