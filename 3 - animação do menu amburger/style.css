@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_pai {
+    background-color: red;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box; /*impede que o filho seja maior que o pai*/
+}
+
+.div_filho {
+    background-color: yellow;
+    width: 90%;
+    height: 90%;
+    padding: 50px;
+    box-sizing: border-box; /*impede que o filho seja maior que o pai*/
+}
+
+.menu {
+  border: 5px solid #ccc;
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centraliza as linhas horizontalmente */
+  gap: 30px; /* Controla o espaçamento exato entre as linhas */
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s; /* Suaviza a borda e a sombra */
+}
+
+.linha {
+  width: 200px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #ccc; 
+  transition: transform 0.2s linear, width 0.2s linear, background-color 0.2s linear;
+}
+
+.menu:hover {
+  border-color: #ff0000;
+  box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 20px;
+
+  .linha {
+    background-color: #ff0000;
+  }
+
+  .linha:first-child {
+    transform: translateY(40px) rotate(45deg); /* Valor ajustado fixo pelo gap */
+  }
+
+  .linha:nth-child(2) {
+    width: 0;
+    opacity: 0; /* Esconde a linha do meio suavemente */
+  }
+
+  .linha:last-child {
+    transform: translateY(-40px) rotate(-45deg); /* Valor ajustado fixo pelo gap */
+  }
+}
