@@ -57,3 +57,5 @@ Este repositório possui fins estritamente estudantis e educativos, distribuído
 ---
 
 Desenvolvido com dedicação por 🧑‍💻 [Gabriel França](https://github.com/francacommit)
+
+update readme at 29/06/2026
