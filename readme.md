@@ -1,26 +1,57 @@
-# 📚 Menu de Navegação Dinâmico (Projeto de Estudos)
+# 📚 Laboratório de Estudos: HTML5 e CSS3
 
-Este é um projeto simples desenvolvido puramente com **HTML5** e **CSS3**. O objetivo principal foi colocar em prática conceitos fundamentais de estilização, responsividade e animações modernas.
+Bem-vindo ao meu repositório central de estudos front-end! Este espaço foi criado para documentar a minha evolução, armazenar exercícios de fixação e centralizar componentes práticos desenvolvidos puramente com **HTML5** e **CSS3**.
 
-> ⚠️ **Nota:** Este repositório possui caráter estritamente educativo para fins de aprendizado e evolução no desenvolvimento front-end.
-
----
-
-## 💡 O que foi praticado neste projeto?
-
-*   **Estrutura Semântica:** Uso correto das tags `<nav>`, `<ul>` e `<li>`.
-*   **Animação com Pseudo-elementos:** Criação de uma linha dinâmica nos links utilizando `::after` e `transition`.
-*   **Flexbox Inteligente:** Uso de `flex-wrap: wrap` e `flex-shrink: 0` para gerenciar o comportamento dos elementos e evitar quebras indesejadas no layout.
-*   **Controle de Fluxo e Dimensões:** Aplicação de `max-content` para ajustar o tamanho do container ao conteúdo interno de forma elegante.
-*   **Otimização do CSS:** Uso da propriedade `currentColor` para herança dinâmica de cores nos estados de hover.
+> 🚀 Mantido por [Gabriel França](https://github.com) como parte do meu portfólio técnico de aprendizado contínuo.
 
 ---
 
-## 📂 Como visualizar o código
+## 📂 Organização do Repositório
 
-1. Faça o download ou clone este repositório.
-2. Abra o arquivo `index.html` em qualquer navegador de sua preferência.
+O repositório está estruturado de forma modular para separar conceitos teóricos de aplicações práticas:
+
+*   **`/` (Raiz):** Componente inicial de Menu de Navegação Dinâmico com efeitos de borda.
+*   **`/aulas/transition-animation/`:** Pasta dedicada a exercícios práticos sobre transições, transformações visuais e animações avançadas.
 
 ---
 
-Desenvolvido por 🧑‍💻 [Gabriel França](https://github.com/Francacommit)
+## 💡 Conceitos Praticados & Conteúdos
+
+### 1. Estrutura e Alinhamento Moderno
+*   **Flexbox Inteligente:** Uso avançado de `flex-wrap: wrap` para responsividade nativa e `flex-shrink: 0` para controle de encolhimento de componentes.
+*   **Comportamento de Containers:** Aplicação prática de `max-content` e `fit-content` para caixas dinâmicas que se ajustam ao texto.
+*   **Reset e Herança:** Otimização de renderização aplicando tipografia no `body` em vez do seletor universal (`*`).
+
+### 2. Animações e Efeitos Visuais (Módulo Recente)
+*   **Pseudo-elementos:** Criação de elementos decorativos puramente via CSS utilizando `::after`, `::before` e a propriedade `content`.
+*   **Transições (`transition`):** Controle de tempo e suavidade (`ease-in-out`) para mudanças de estado como `:hover`.
+*   **Animações (`@keyframes`):** Criação de loops e movimentos fluidos na tela para melhorar a experiência do usuário (UI).
+
+---
+
+## ⚙️ Diferenciais Técnicos Aplicados
+
+*   **Otimização de Fontes:** Importação restrita de pesos na URL do Google Fonts, reduzindo o tempo de carregamento das páginas.
+*   **Uso de `currentColor`:** Código limpo e inteligente onde elementos filhos herdam dinamicamente a cor de texto atual do elemento pai.
+*   **Conventional Commits:** Histórico de versionamento padronizado de acordo com as boas práticas do mercado global.
+
+---
+
+## 📂 Como Clonar e Explorar os Exercícios
+
+1. Clone o repositório completo:
+   ```bash
+   git clone https://github.com/html-css-estudos.git
+   ```
+2. Entre na pasta do componente ou da aula desejada.
+3. Abra o arquivo `index.html` correspondente diretamente no seu navegador.
+
+---
+
+## 📄 Licença
+
+Este repositório possui fins estritamente estudantis e educativos, distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+
+---
+
+Desenvolvido com dedicação por 🧑‍💻 [Gabriel França](https://github.com/francacommit)
