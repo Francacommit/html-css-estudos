@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .imagem {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0;
+        transition: 0.5s linear;
+      }
+
+      .imagem:hover .overlay {
+        opacity: 0.4;
+      }
+    </style>
+    <title>Efeito overlay</title>
+  </head>
+  <body>
+    <div
+      class="imagem"
+      style="
+        background-image: url(&quot;https://images.pexels.com/photos/1064162/pexels-photo-1064162.jpeg&quot;);
+      "
+    >
+      <div class="overlay"></div>
+    </div>
+  </body>
+</html>
