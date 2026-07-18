@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  width: 350px;
+  height: 550px;
+}
+
+.container:hover .flip {
+    transform: rotateY(180deg);
+}
+
+.flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  /* 
+   transform-style: preserve-3d;
+   - Permite que os elementos filhos de um container sejam renderizados 
+     em um espaço 3D real, em vez de serem achatados no plano 2D. 
+   - Essencial para criar animações como 'flip cards' ou rotações 
+     onde os itens precisam manter sua profundidade e perspectiva.
+    */
+    transition: 0.5s;
+}
+
+.frente,
+.tras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #0000001a;
+  backface-visibility: hidden;
+  /*backface-visibility: hidden;
+    Isso evita o "tremido" ou borrão em animações 3D
+    e garante que a parte de trás do elemento fique invisível.*/
+}
+
+.frente {
+  background-image: url("https://images.pexels.com/photos/4910830/pexels-photo-4910830.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.tras {
+  background-color: #753A10;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  /* 
+   transform: rotateY(180deg);
+   - Rotaciona o elemento em 180 graus no eixo Y (eixo vertical).
+   - Cria um efeito de "espelhamento" ou "vira" o elemento como se fosse 
+     a página de um livro ou uma carta de baralho.
+*/
+}
