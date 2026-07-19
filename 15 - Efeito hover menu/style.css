@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.link {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 8px #00000054;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 2.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.link i {
+    z-index: 1;
+}
+
+.link::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 110%;
+    left: -25%;
+    border-radius: 30px;
+}
+
+.link:hover i {
+    color: white;
+    transform: scale(1.2);
+}
+
+.link:hover::before {
+    animation: desloca .5s linear;
+    left: 0;
+    top: 0;
+}
+
+@keyframes desloca {
+    0% {
+        left: -100px;
+        top: 100%;
+    }
+
+    50% {
+        left: 15%;
+        top: -25%;
+    }
+
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+.link-1 {
+    color: rgb(255, 166, 0);
+}
+
+.link-1::before {
+    background-color: rgb(255, 166, 0);
+}
+
+.link-2 {
+    color: rgb(0, 153, 255);
+}
+
+.link-2::before {
+    background-color: rgb(0, 153, 255);
+}
+
+.link-3 {
+    color: rgb(255, 0, 140);
+}
+
+.link-3::before {
+    background-color: rgb(255, 0, 140);
+}
