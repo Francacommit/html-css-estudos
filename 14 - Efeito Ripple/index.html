@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efeito button</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .button {
+        background-color: gray;
+        padding: 60px 100px;
+        text-decoration: none;
+        border-radius: 70px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button span {
+        position: relative;
+        color: white;
+        font-size: 3rem;
+      }
+
+      .button::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        background-color: orange;
+        position: absolute;
+        top: var(--eixoY);
+        left: var(--eixoX);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width .5s, height .5s;
+      }
+
+      .button:hover::before {
+        width: 1000px;
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="button"><span>Comprar</span></a>
+
+    <script>
+      // Seleciona o primeiro elemento no documento que possui a classe 'button'
+      let btn = document.querySelector(".button");
+
+      // Adiciona um "ouvinte" de evento: toda vez que o mouse se mover sobre este botão, a função será disparada
+      btn.onmousemove = function (e) {
+        // Calcula a posição horizontal do mouse em relação ao canto esquerdo do botão
+        // e.pageX é a posição na página, e btn.offsetLeft é o quanto o botão está afastado da margem esquerda
+        let x = e.pageX - btn.offsetLeft;
+
+        // Calcula a posição vertical do mouse em relação ao topo do botão
+        // e.pageY é a posição na página, e btn.offsetTop é o quanto o botão está afastado do topo
+        let y = e.pageY - btn.offsetTop;
+
+        // Envia o valor X para uma variável CSS customizada chamada '--eixoX' no elemento
+        btn.style.setProperty("--eixoX", x + "px");
+
+        // Envia o valor Y para uma variável CSS customizada chamada '--eixoy' no elemento
+        btn.style.setProperty("--eixoY", y + "px");
+      };
+    </script>
+  </body>
+</html>
