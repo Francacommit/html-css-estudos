@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 52, 52);
+  color: white;
+  text-transform: uppercase;
+}
+
+.text-animado span{
+    position: relative;
+}
+
+.text-animado span::before {
+    content: "";
+    color: rgb(255, 52, 86);
+    animation: palavras 15s linear infinite;
+}
+
+@keyframes palavras {
+    0%, 20% {
+        content: "Deixou o like?";
+    }
+    21%, 40% {
+        content: "Ativou o sininho?";
+    }
+    41%, 60% {
+        content: "Já comentou?";
+    }
+    61%, 80% {
+        content: "Já se inscreveu?";
+    }
+    81%, 100% {
+        content: "Já compartilhou?";
+    }
+}
+
+.text-animado span::after {
+    content: "";
+    border-left: 2px solid rgb(255, 52, 86);
+    animation: cursor .8s linear infinite, digitar 15s steps(15) infinite;
+    position: absolute;
+    height: 100%;
+    right: -10px;
+    width: calc(100% + 8px);
+    background-color: rgb(53, 52, 52);
+}
+
+@keyframes cursor {
+    0% {
+        border-left: 2px solid rgba(255, 52, 86, 0);
+    }
+}
+
+@keyframes digitar {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+}
